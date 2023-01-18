@@ -22,3 +22,5 @@ let p = Profile()
 // 변경할 때마다 willset 메서드가 실행된다.
 p.statusMessage = "행복해"
 p.statusMessage = "우울해"
+
+
