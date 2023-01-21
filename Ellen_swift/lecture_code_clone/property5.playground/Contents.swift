@@ -7,7 +7,7 @@ class Dog1{
         var name:String
         var weight: Double
 
-        init(name: Stirng, weight: Double){
+        init(name: String, weight: Double){
                 self.name = name
                 self.weight = weight
         }
