@@ -30,14 +30,28 @@ s.nameChange(name: "홍길동")
 
 class Singleton{
     // 싱글톤 생성을 위한 문법
+    // 자신의 객체를 생성해서 전역변수에 할당
     static let shared = Singleton()
     var userInfoId = 1234
+    
+    // 추가적인 객체 생성을 막는다.
+    private init() {}
 }
 
 
-let object = Singleton.shared
+let object = Singleton.shared // Singleton
 object.userInfoId = 777777
-//Singleton.shared.userInfoId = 77777
-Singleton.shared.userInfoId
+
+object.userInfoId
+
+// 아래와 같은 것도 가능
+//let singleton = Singleton()
+
+//singleton.userInfoId  = 12345
+//singleton.userInfoId // 12345
+
+object.userInfoId // 7777
+
+// 따라서 private init() 설정으로 추가적으로 새로운 객체 생성이 불가하게 막는것이 가능하다.
 
 
