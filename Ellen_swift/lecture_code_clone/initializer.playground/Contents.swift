@@ -75,12 +75,12 @@ class Bclass: Aclass{
                 super.init(x: x, y: y)
         }
 
-        convenience init(x: Int){
+        convenience init(z: Int){
                 self.init(x: 0, y: 0, z: z)
         }
 
         convenience init(){
-                self.init(x: 0)
+                self.init(z: 0)
         }
 
         func doSomething(){
