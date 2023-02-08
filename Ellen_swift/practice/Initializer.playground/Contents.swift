@@ -30,16 +30,17 @@ class Aclass {
 class Bclass: Aclass {
 
     var z: Int
-
-    convenience init(){
-        self.init(z:0)
-    }
     
     
     // 이 부분에 지정생성자 및 편의 생성자(상위의 지정생성자를 재정의해서) 구현
-    init(z:Int){
+    init(x:Int, y:Int, z:Int){
         self.z = z
-        super.init(x: 0, y: 0)
+        super.init(x: x, y: y)
+    }
+    
+    
+    override convenience init(x: Int, y: Int){
+        self.init(x: x, y: y, z: 0)
     }
     
     
