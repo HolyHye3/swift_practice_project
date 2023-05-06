@@ -71,3 +71,70 @@ print(factorial(&num))
 //    print(n)
 //}
 
+
+//=======================================================
+
+
+
+func randomString (_ s:String) -> String {
+
+    return String(s.randomElement()!)
+
+}
+
+print(randomString("안녕하세요"))
+
+
+var test = "안녕하세요"
+//print(test.count)
+
+
+// ============================================
+
+func primeNum( _ num:Int ){
+    
+//    guard num != 2 && num != 3 else{
+//        print("소수입니다.")
+//        return
+//    }
+    guard (num != 2 && num != 3) && (num % 2 == 0 || num % 3 == 0) else{
+        print("소수입니다.")
+        return
+    }
+    print("소수가 아닙니다..")
+}
+
+primeNum(33)
+
+
+
+
+func factorialFunc(_ num:Int) -> Int {
+
+    // for문 사용
+//    var result = 1
+//    for i in 1...num {
+//        result *= i
+//
+//        print(result)
+//    }
+//
+//    return result
+    
+    
+    // 재귀함수 사용
+    print(num)
+    if num == 1 {
+        return 1
+    }
+    return num * factorialFunc(num - 1)
+    
+}
+
+print("결과값: \(factorialFunc(4))")
+
+
+
+
+
+
